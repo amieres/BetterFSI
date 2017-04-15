@@ -24,7 +24,7 @@ and execute them with Right-Click `Execute in Interactive`
 
 When any of your files changes, they will be reloaded automaticaly just before executing your command.
 
-#Caveats: 
+## Caveats: 
 - it uses SendKeys so it is better to use the menu to execute and not the shortcut as they keystrokes may interfere.
 
 Enjoy!
