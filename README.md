@@ -8,12 +8,11 @@ Add the following comment somewhere in your script file(s), maybe at the top or 
 ```F#
 (*          
 (*keep*)#load "BetterFSI.fsx"  // <<<==== Execute first in F# Interactive
-let
 Do __SOURCE_FILE__ __LINE__ //
 Do __SOURCE_FILE__ __LINE__ //   sprintf "Hello %s" System.Windows.Forms.SystemInformation.UserName |> BetterFSI.Copy 
 Do __SOURCE_FILE__ __LINE__ //   BetterFSI.Paste()
-Do __SOURCE_FILE__ __LINE__ //   "Hello".[..2]
-Do __SOURCE_FILE__ __LINE__ //   (new System.Windows.Forms.Form()).Show()
+Do __SOURCE_FILE__ __LINE__ //   BetterFSI.Paste().[..6]
+Do __SOURCE_FILE__ __LINE__ //   let f = new System.Windows.Forms.Form() ;; f.Text <- BetterFSI.Paste() ;; f.ShowDialog()
 Do __SOURCE_FILE__ __LINE__ //
 *)
 ```
