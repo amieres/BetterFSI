@@ -3,7 +3,7 @@ A utility script for improving the F# Interactive experience
 
 # Usage:
 Place **BetterFSI.fsx** in the same directory as your script files.
-Add this somewhere in your script file(s):
+Add this somewhere in your script file(s), maybe at the top or the bottom:
 
 ```F#
 (*          
