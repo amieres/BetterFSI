@@ -16,17 +16,21 @@ let userTimerWithCallback ms =
     timer.Stop()
     //printfn "Timer ticked at %O" DateTime.Now.TimeOfDay
 
-let Copy  txt = System.Windows.Forms.Clipboard.SetText txt
-                if Verbose then printf "Copied to clipboard: %s...\n\n" <| txt.Substring(0, 100)
-let Paste ()  = System.Windows.Forms.Clipboard.GetText()
-let SendKeys  = System.Windows.Forms.SendKeys.SendWait
+let Copy        txt = System.Windows.Forms.Clipboard.SetText txt
+                      if Verbose then printf "Copied to clipboard: %s...\n\n" <| txt.[..min (txt.Length - 1) 100]
+let Paste ()        = System.Windows.Forms.Clipboard.GetText()
+let SendKeys        = System.Windows.Forms.SendKeys.SendWait
+let keysRaw: string -> string =
+    fun      txt    -> txt.Split '\n'
+                       |> Array.map (String.collect (fun c -> if c = ' ' then " " else sprintf "{%c}" c))
+                       |> String.concat "{ENTER}"
 
 let sendToFsi: string -> unit =
     fun        text   -> if text <> "" then
                             //printfn "---->\n%s\n<------" text
-                            System.Windows.Forms.Clipboard.SetText (text + "\n\n")
                             SendKeys ExecuteInteractiveKeys
-                            SendKeys "^v{ENTER};;{ENTER}"
+                            SendKeys <| keysRaw text
+                            SendKeys "{ENTER};;{ENTER}"
                             SendKeys "^{TAB}"
                             userTimerWithCallback 200.
 
