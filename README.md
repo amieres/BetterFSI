@@ -3,7 +3,7 @@ A utility script for improving the F# Interactive experience, specially when wor
 
 # The Concept
 
-Entering code directly in the FSI is not usual practice because it is hard to keep track of what has been sent and in what order. Also as the code scrolls up it gets lost and it becomes difficult to fetch and maintain. Only the simplest tasks can be done this way.
+Entering code directly in the FSI is not usual practice because it is hard to keep track of what has been sent and in what order. Lack of syntax highliting and intellisense does not help either. Also as the code scrolls up it gets lost and it becomes difficult to fetch and maintain. Only the simplest tasks can be done this way.
 
 It is then a good idea to maintain the code in FSX file(s) and from there send it to the REPL. This involves using CTRL-A a lot to select the whole file and then sending it to the FSI. This is not difficult but as the files grow it becomes less comfortable as it involves a lot of scrolling back. When several files are involved the task becomes rather cumbersome.
 
