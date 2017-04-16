@@ -1,5 +1,5 @@
 # BetterFSI
-A utility script for improving the F# Interactive experience, specially when working with multi-file scripts.
+A utility script for improving the F# Interactive experience, specially when working with multi-file scripts. For Visual Studio.
 
 # The Concept
 
