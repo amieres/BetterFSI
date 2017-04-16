@@ -40,6 +40,7 @@ Do __SOURCE_FILE__ __LINE__ //
 When any of your files changes, they will be reloaded automaticaly just before executing your command.
 
 ## Caveats: 
-- it uses SendKeys so it is better to use the mouse than the shortcut as they keystrokes sometimes may interfere and produce undesirable results.
+- It uses SendKeys so it is better to use the mouse than the shortcut as they keystrokes sometimes may interfere and produce undesirable results.
+- It works only for Visual Studio
 
 Enjoy!
