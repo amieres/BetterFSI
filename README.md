@@ -17,9 +17,9 @@ Do __SOURCE_FILE__ __LINE__ //
 *)
 ```
 
-Execute the #load line once at the beginning.
-Prefix your test commands with `Do __SOURCE_FILE__ __LINE__ //`
-and execute them with Right-Click `Execute in Interactive`
+- Execute the #load line once at the beginning.
+- Prefix your test commands with `Do __SOURCE_FILE__ __LINE__ //`
+- Execute them with Right-Click *Execute in Interactive*
 
 When any of your files changes, they will be reloaded automaticaly just before executing your command.
 
