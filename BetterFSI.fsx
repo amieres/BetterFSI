@@ -54,7 +54,7 @@ with
                                                     |> Array.partition (fun l -> l.StartsWith "#r " || l.StartsWith "#I ")
                                                     |> fun (fs, sd) -> System.IO.File.WriteAllLines(TestFile, Array.append fs sd)
                                                     yield  "#load @" + "\"" + TestFile +  "\" "
-                                                    yield  "open Test"
+                                                    yield  "open __Test__"
                                                     yield! this.fsiCommands |> Array.filter (fun l -> l.StartsWith "open ")
                                              ]
                                              |> String.concat "\n"
